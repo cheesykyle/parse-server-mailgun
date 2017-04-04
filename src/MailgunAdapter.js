@@ -40,7 +40,7 @@ class MailgunAdapter extends MailAdapter {
         for (let name in templates) {
             const { subject, pathPlainText, callback } = templates[name];
 
-            if (typeof subject !== 'string' || typeof pathPlainText !== 'string') {
+            if (typeof pathPlainText !== 'string') {
                 throw new Error(ERRORS.bad_template_config);
             }
 
